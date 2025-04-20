@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Wonderland</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        
+        <div class="content-wrapper">
+
+            
+            <div class="page-container">
+                <header>
+                    <h1>🌈 Animal Wonderland 🐾</h1>
+                    <p>Type an animal or click one below to explore!</p>
+                </header>
+
+                <div class="example-animals">
+                    <button onclick="chooseAnimal(this)" class="example-btn" value="lion">🦁 Lion</button>
+                    <button onclick="chooseAnimal(this)" class="example-btn" value="dragon">🐉 Dragon</button>
+                    <button onclick="chooseAnimal(this)" class="example-btn" value="unicorn">🦄 Unicorn</button>
+                    <button id="reload" class="example-btn">🔄️</button>
+                </div>
+            </div>
+
+            
+            <div class="wrapper">
+                <input id="inanimal" type="text" autocomplete="off" placeholder="Search about animal">
+                <button id="btnanimal" type="submit">Excited to Know!</button>
+
+                <div id="animalinfo">
+                    <h2 id="h2animal"></h2>
+                    <img id="imganimal">
+                    <p id="panimal"></p>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <footer class="footer">
+            <p>Made with 🐾 and 💜 by <a href="https://wa.me/966535390390?text=%E2%80%8E%20Hiii%2C%20I%20like%20your%20animal%20site%20%3A%29%20%20">Essam Zarei</a></p>
+        </footer>
+
+    </div>
+
+    <script src="js.js"></script>
+</body>
+
+</html>
