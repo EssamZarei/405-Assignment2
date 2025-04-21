@@ -1,239 +1,275 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* HTML/Body layout setup */
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family:  'Comic Sans MS', 'Segoe UI';
-    background: linear-gradient(120deg, #d0c3ff, #ffdae0, #c5f6ff);
-    background-size: 300% 300%;
-    animation: gradientBG 15s ease infinite;
-    color: #4b4b4b;
-    overflow-x: hidden;
-  }
-  
-  /* Sticky footer layout container */
-  .page-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .content-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Animate background */
-  @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
-  /* Wrapper: centers your content */
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Page header */
-  .page-container {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 30px;
-  }
-  
-  header h1 {
-    font-size: 38px;
-    color: #8e44ad;
-    margin-bottom: 8px;
-    text-shadow: 2px 2px #f8c8ff;
-  }
-  
-  header p {
-    font-size: 18px;
-    color: #6c5ce7;
-  }
-  
-  /* Example animal buttons */
-  .example-animals {
-    margin: 15px auto 25px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-  
-  .example-btn {
-    padding: 10px 16px;
-    font-size: 16px;
-    border-radius: 20px;
-    border: none;
-    background: linear-gradient(to right, #a29bfe, #ffb6c1);
-    color: white;
-    cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  
-  .example-btn:hover {
-    background: linear-gradient(to right, #ffe0f7, #d0c3ff);
-    transform: scale(1.12) rotate(-1deg);
-    box-shadow: 0 4px 12px rgba(255, 182, 255, 0.3);
-    -webkit-text-fill-color: #8e44ad;
-
-  }
-  
-  /* Search input and button layout */
-  .search-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
-  
-  /* Input Field */
-  #inanimal {
-    padding: 14px 18px;
-    width: 280px;
-    max-width: 90%;
-    font-size: 17px;
-    border: 2px solid #a29bfe;
-    border-radius: 14px;
-    background-color: #fffafc;
-    outline: none;
-    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
-    margin-bottom: 25px;
-    margin-top: -40px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
-  #inanimal:focus,
-  #inanimal:hover {
-    background-color: #f8edff;
-    border-color: #6c5ce7;
-    box-shadow: 0 0 10px rgba(162, 155, 254, 0.4);
+
+/* HTML/Body layout setup */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #d0c3ff, #ffdae0, #c5f6ff);
+  background-size: 300% 300%;
+  animation: gradientBG 15s ease infinite;
+  color: #4b4b4b;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fix gradient for long pages */
+body::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  background: linear-gradient(120deg, #d0c3ff, #ffdae0, #c5f6ff);
+  background-size: 300% 300%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Animate background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sticky footer layout container */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Wrapper */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Page header */
+.page-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 38px;
+  color: #8e44ad;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px #f8c8ff;
+}
+
+header p {
+  font-size: 18px;
+  color: #6c5ce7;
+}
+
+/* Example animal buttons */
+.example-animals {
+  margin: 15px auto 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.example-btn {
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(to right, #a29bfe, #ffb6c1);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.example-btn:hover {
+  background: linear-gradient(to right, #ffe0f7, #d0c3ff);
+  transform: scale(1.12) rotate(-1deg);
+  box-shadow: 0 4px 12px rgba(255, 182, 255, 0.3);
+  -webkit-text-fill-color: #8e44ad;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* Input */
+#inanimal {
+  padding: 14px 18px;
+  width: 280px;
+  max-width: 90%;
+  font-size: 17px;
+  border: 2px solid #a29bfe;
+  border-radius: 14px;
+  background-color: #fffafc;
+  outline: none;
+  transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 25px;
+  margin-top: -40px;
+}
+
+#inanimal:focus,
+#inanimal:hover {
+  background-color: #f8edff;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 10px rgba(162, 155, 254, 0.4);
+}
+
+/* Main Action Button */
+#btnanimal {
+  padding: 14px 24px;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(to right, #a29bfe, #ff9ff3);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 5px;
+}
+
+#btnanimal:hover {
+  background: linear-gradient(to right, #ffb6f2, #a29bfe);
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(162, 155, 254, 0.6);
+}
+
+/* Animal Info */
+#animalinfo {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 35px 25px;
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  transition: box-shadow 0.4s ease;
+}
+
+#animalinfo:hover {
+  box-shadow: 0 15px 40px rgba(162, 155, 254, 0.2);
+}
+
+#h2animal {
+  font-size: 30px;
+  color: #6c5ce7;
+  margin-bottom: 20px;
+}
+
+#imganimal {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border: 5px dashed #a29bfe;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#imganimal:hover {
+  transform: rotate(-2deg) scale(1.05);
+  box-shadow: 0 8px 18px rgba(162, 155, 254, 0.4);
+}
+
+#panimal {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #6c5ce7;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-top: 2px dashed #a29bfe;
+  width: 100%;
+}
+
+.footer a {
+  color: #ff79c6;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Gallery iframe */
+.gallery-frame {
+  display: block;
+  margin: 40px auto;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 860px;
+  height: 80vh;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  overflow: hidden;
+}
+
+/* Iframe inside: Gallery Title */
+.gallery-title {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #a24dff;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-shadow: 1px 1px 2px #ffc8ff;
+  letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .search-bar {
+    flex-direction: column;
   }
-  
-  /* Main Action Button */
+
+  #inanimal,
   #btnanimal {
-    padding: 14px 24px;
-    font-size: 17px;
-    font-weight: bold;
-    border: none;
-    border-radius: 14px;
-    background: linear-gradient(to right, #a29bfe, #ff9ff3);
-    color: white;
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 5px;
-  }
-  
-  #btnanimal:hover {
-    background: linear-gradient(to right, #ffb6f2, #a29bfe);
-    transform: scale(1.08);
-    box-shadow: 0 0 15px rgba(162, 155, 254, 0.6);
-  }
-  
-  /* Animal Info Section */
-  #animalinfo {
-    margin-top: 20px;
-    margin-bottom: 60px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 35px 25px;
-    border-radius: 25px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    transition: box-shadow 0.4s ease;
-  }
-  
-  #animalinfo:hover {
-    box-shadow: 0 15px 40px rgba(162, 155, 254, 0.2);
-  }
-  
-  #h2animal {
-    font-size: 30px;
-    color: #6c5ce7;
-    margin-bottom: 20px;
-  }
-  
-  #imganimal {
-    width: 100%;
-    max-width: 320px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    border: 5px dashed #a29bfe;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  #imganimal:hover {
-    transform: rotate(-2deg) scale(1.05);
-    box-shadow: 0 8px 18px rgba(162, 155, 254, 0.4);
-  }
-  
-  #panimal {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-  }
-  
-  /* Footer */
-  .footer {
-    padding: 20px;
-    text-align: center;
-    font-size: 16px;
-    color: #6c5ce7;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-top: 2px dashed #a29bfe;
     width: 100%;
   }
-  
-  .footer a {
-    color: #ff79c6;
-    text-decoration: none;
+
+  .example-animals {
+    flex-direction: column;
   }
-  
-  .footer a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Mobile Responsive */
-  @media (max-width: 480px) {
-    .search-bar {
-      flex-direction: column;
-    }
-  
-    #inanimal,
-    #btnanimal {
-      width: 100%;
-    }
-  
-    .example-animals {
-      flex-direction: column;
-    }
-  }
-  
+}
