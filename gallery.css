@@ -1,0 +1,182 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body & Background */
+  html, body {
+    height: 100%;
+    font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #d0c3ff, #ffdae0, #c5f6ff);
+    background-size: 300% 300%;
+    animation: gradientBG 15s ease infinite;
+    overflow-x: hidden;
+    color: #4b4b4b;
+  }
+  
+  /* Animated gradient background */
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Sticky Header */
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    padding: 15px 10px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title */
+  h1 {
+    font-size: 36px;
+    color: #8e44ad;
+    text-shadow: 2px 2px #f8c8ff;
+    margin-bottom: 10px;
+  }
+  
+  /* Input field */
+  #inDetect {
+    padding: 12px 16px;
+    width: 280px;
+    max-width: 90%;
+    font-size: 16px;
+    border: 2px solid #a29bfe;
+    border-radius: 14px;
+    background-color: #fffafc;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  #inDetect:focus,
+  #inDetect:hover {
+    background-color: #f8edff;
+    border-color: #6c5ce7;
+    box-shadow: 0 0 10px rgba(162, 155, 254, 0.4);
+  }
+  
+  /* Button */
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(to right, #a29bfe, #ff9ff3);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #ffb6f2, #a29bfe);
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(162, 155, 254, 0.6);
+  }
+  
+  /* Image Grid */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    max-width: 960px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 20px 40px;
+  }
+  
+  .container img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 4px solid #a29bfe;
+    padding: 6px;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: popIn 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .container img:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    background-color: #fff0fa;
+    border-color: #ff79c6;
+  }
+  
+  @keyframes popIn {
+    from {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Max 3 columns */
+  @media (min-width: 0px) {
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @media (min-width: 500px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 800px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+
+
+/* Subheading below title */
+.gallery-subtitle {
+    color: #6c5ce7;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+  
+  
+  /* Input & button layout */
+  .detect-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Result text */
+  .animal-result {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 8px;
+    min-height: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Optional animation for entrance */
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.7); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  

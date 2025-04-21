@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <div class="sticky-header">
+        <h1>🕶️ Discover Your Wild Side! 🦊</h1>
+        <p class="gallery-subtitle">Paste an animal image link and click the magic button!</p>
+
+        <input id="inDetect" type="text" placeholder="Paste Image URL">
+        <button id="btnDetect" >Detect Animal!</button>
+        <h3 id="h3Detect" class="animal-result">🦉 Waiting for a wild guess...</h3>
+    </div>
+    
+      
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Hydrochoeris_hydrochaeris_in_Brazil_in_Petr%C3%B3polis%2C_Rio_de_Janeiro%2C_Brazil_09.jpg/500px-Hydrochoeris_hydrochaeris_in_Brazil_in_Petr%C3%B3polis%2C_Rio_de_Janeiro%2C_Brazil_09.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/A_big_male_Addax_showing_as_the_power_of_his_horns.jpg/500px-A_big_male_Addax_showing_as_the_power_of_his_horns.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Mantled_howler_monkey_and_baby_%2881337%292.jpg/250px-Mantled_howler_monkey_and_baby_%2881337%292.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/European_hamster_%28Cricetus_cricetus%29_Meidling_2.jpg/330px-European_hamster_%28Cricetus_cricetus%29_Meidling_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Humpback_whale_%28Megaptera_novaeangliae%29_calf_Moorea_2.jpg/500px-Humpback_whale_%28Megaptera_novaeangliae%29_calf_Moorea_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Parti-coloured_bat_%28Vespertilio_murinus%29_Slovakia.jpg/250px-Parti-coloured_bat_%28Vespertilio_murinus%29_Slovakia.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/European_souslik_%28Spermophilus_citellus%29_Obrovisko.jpg/450px-European_souslik_%28Spermophilus_citellus%29_Obrovisko.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Samango_monkey_%28Cercopithecus_mitis_erythrarchus%29_Mount_Sheba.jpg/960px-Samango_monkey_%28Cercopithecus_mitis_erythrarchus%29_Mount_Sheba.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Antidorcas_marsupialis%2C_male_%28Etosha%2C_2012%29.jpg/500px-Antidorcas_marsupialis%2C_male_%28Etosha%2C_2012%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/094_Wild_female_Alpine_Ibex_at_Creux_du_Van_Photo_by_Giles_Laurent.jpg/500px-094_Wild_female_Alpine_Ibex_at_Creux_du_Van_Photo_by_Giles_Laurent.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Lince_ib%C3%A9rico_%28Lynx_pardinus%29%2C_Almuradiel%2C_Ciudad_Real%2C_Espa%C3%B1a%2C_2021-12-19%2C_DD_07.jpg/330px-Lince_ib%C3%A9rico_%28Lynx_pardinus%29%2C_Almuradiel%2C_Ciudad_Real%2C_Espa%C3%B1a%2C_2021-12-19%2C_DD_07.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/African_buffalo_%28Syncerus_caffer%29_male_with_Oxpecker.jpg/375px-African_buffalo_%28Syncerus_caffer%29_male_with_Oxpecker.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/New_Zealand_fur_seal_%28Arctocephalus_forsteri%29_female_with_suckling_pup_Kangaroo_Island.jpg/500px-New_Zealand_fur_seal_%28Arctocephalus_forsteri%29_female_with_suckling_pup_Kangaroo_Island.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Eastern_grey_kangaroo_%28Macropus_giganteus%29_Mount_Annan_composite_of_6.jpg/1324px-Eastern_grey_kangaroo_%28Macropus_giganteus%29_Mount_Annan_composite_of_6.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Eastern_quoll_%28Dasyurus_viverrinus%29_fawn_morph_Esk_Valley.jpg/450px-Eastern_quoll_%28Dasyurus_viverrinus%29_fawn_morph_Esk_Valley.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Duck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg/500px-Duck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/003_Wild_Alpine_Ibex_Sunset_Creux_du_Van_Mont_Racine_Photo_by_Giles_Laurent.jpg/250px-003_Wild_Alpine_Ibex_Sunset_Creux_du_Van_Mont_Racine_Photo_by_Giles_Laurent.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Short-beaked_echidna_%28Tachyglossus_aculeatus_setosus%29_Scottsdale.jpg/500px-Short-beaked_echidna_%28Tachyglossus_aculeatus_setosus%29_Scottsdale.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/035_Uganda_kobs_mating_at_Queen_Elizabeth_National_Park_Photo_by_Giles_Laurent.jpg/450px-035_Uganda_kobs_mating_at_Queen_Elizabeth_National_Park_Photo_by_Giles_Laurent.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Museo_de_Historia_Natural%2C_Londres%2C_Inglaterra%2C_2022-11-25%2C_DD_50-52_HDR.jpg/498px-Museo_de_Historia_Natural%2C_Londres%2C_Inglaterra%2C_2022-11-25%2C_DD_50-52_HDR.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/071_Wild_marmot_at_Grand_Muveran_Nature_Reserve_Photo_by_Giles_Laurent.jpg/500px-071_Wild_marmot_at_Grand_Muveran_Nature_Reserve_Photo_by_Giles_Laurent.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Red-tailed_squirrel_%28Sciurus_granatensis_chrysuros%29_male_Caldas.jpg/500px-Red-tailed_squirrel_%28Sciurus_granatensis_chrysuros%29_male_Caldas.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Cynomys_ludovicianus_GNP_21.jpg/330px-Cynomys_ludovicianus_GNP_21.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Zaniskari_Horse_in_Ladakh.jpg/450px-Zaniskari_Horse_in_Ladakh.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Red_Panda_%2824986761703%29.jpg/500px-Red_Panda_%2824986761703%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Cheetah_Brothers_AdF.jpg/450px-Cheetah_Brothers_AdF.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Geoffroy%27s_tamarin_%28Saguinus_geoffroyi%29_2.jpg/330px-Geoffroy%27s_tamarin_%28Saguinus_geoffroyi%29_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/European_bison_%28Bison_bonasus%29_male_Bia%C5%82owieza.jpg/450px-European_bison_%28Bison_bonasus%29_male_Bia%C5%82owieza.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Eurasian_brown_bear_%28Ursus_arctos_arctos%29_female_1.jpg/450px-Eurasian_brown_bear_%28Ursus_arctos_arctos%29_female_1.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Chipmunk_with_stuffed_cheeks_in_Prospect_Park_%2805980%29.jpg/500px-Chipmunk_with_stuffed_cheeks_in_Prospect_Park_%2805980%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Sonoma_chipmunk_at_Samuel_P._Taylor_State_Park.jpg/960px-Sonoma_chipmunk_at_Samuel_P._Taylor_State_Park.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lion_%28Panthera_leo%29_male_6y.jpg/250px-Lion_%28Panthera_leo%29_male_6y.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Rhesus_macaque_%28Macaca_mulatta_mulatta%29%2C_male%2C_Gokarna.jpg/500px-Rhesus_macaque_%28Macaca_mulatta_mulatta%29%2C_male%2C_Gokarna.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Roan_antelope_%28Hippotragus_equinus_koba%29.jpg/500px-Roan_antelope_%28Hippotragus_equinus_koba%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Five-striped_palm_squirrel_%28Funambulus_pennantii%29.jpg/300px-Five-striped_palm_squirrel_%28Funambulus_pennantii%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Ring-tailed_lemur_%28Lemur_catta%29.jpg/250px-Ring-tailed_lemur_%28Lemur_catta%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Gemsbok_%28Oryx_gazella%29_male.jpg/500px-Gemsbok_%28Oryx_gazella%29_male.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/South-western_black_rhinoceros_%28Diceros_bicornis_occidentalis%29_female.jpg/500px-South-western_black_rhinoceros_%28Diceros_bicornis_occidentalis%29_female.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Jaguar_%28Panthera_onca_palustris%29_male_Three_Brothers_River_2.jpg/500px-Jaguar_%28Panthera_onca_palustris%29_male_Three_Brothers_River_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg/500px-Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/California_sea_lion_in_La_Jolla_%2870568%29.jpg/500px-California_sea_lion_in_La_Jolla_%2870568%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Indian_rhinoceros_%28Rhinoceros_unicornis%29_4.jpg/500px-Indian_rhinoceros_%28Rhinoceros_unicornis%29_4.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Lama_glama_Laguna_Colorada_2.jpg/450px-Lama_glama_Laguna_Colorada_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Giraffa_camelopardalis_head_%28Profil%29.jpg/500px-Giraffa_camelopardalis_head_%28Profil%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Sable_antelope_%28Hippotragus_niger%29_adult_male.jpg/500px-Sable_antelope_%28Hippotragus_niger%29_adult_male.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Cheetah_%28Acinonyx_jubatus%29_cub.jpg/500px-Cheetah_%28Acinonyx_jubatus%29_cub.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Coucang.jpg/500px-Coucang.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Spotted_hyena_%28Crocuta_crocuta%29.jpg/559px-Spotted_hyena_%28Crocuta_crocuta%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cervus_canadensis_nannodes_at_Tomales_Point.jpg/500px-Cervus_canadensis_nannodes_at_Tomales_Point.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Leopardo_%28Panthera_pardus%29_devorando_un_ant%C3%ADlope%2C_parque_nacional_Kruger%2C_Sud%C3%A1frica%2C_2018-07-26%2C_DD_06.jpg/500px-Leopardo_%28Panthera_pardus%29_devorando_un_ant%C3%ADlope%2C_parque_nacional_Kruger%2C_Sud%C3%A1frica%2C_2018-07-26%2C_DD_06.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Proboscis_monkey_%28Nasalis_larvatus%29_composite.jpg/500px-Proboscis_monkey_%28Nasalis_larvatus%29_composite.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Endangered_arctic_-_starving_polar_bear.jpg/960px-Endangered_arctic_-_starving_polar_bear.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Nilgai_%28Boselaphus_tragocamelus%29_male.jpg/500px-Nilgai_%28Boselaphus_tragocamelus%29_male.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Common_seal_%28Phoca_vitulina%29_2.jpg/500px-Common_seal_%28Phoca_vitulina%29_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Rock_hyrax_%28Procavia_capensis%29_2.jpg/250px-Rock_hyrax_%28Procavia_capensis%29_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Abyssinian_black-and-white_colobus_%28Colobus_guereza_guereza%29_male_head.jpg/330px-Abyssinian_black-and-white_colobus_%28Colobus_guereza_guereza%29_male_head.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/African_buffalo_%28Syncerus_caffer_caffer%29_male_with_cattle_egret.jpg/500px-African_buffalo_%28Syncerus_caffer_caffer%29_male_with_cattle_egret.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Southern_plains_grey_langur_%28Semnopithecus_dussumieri%29_female_head.jpg/500px-Southern_plains_grey_langur_%28Semnopithecus_dussumieri%29_female_head.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Topi_%28Damaliscus_lunatus_jimela%29_female.jpg/500px-Topi_%28Damaliscus_lunatus_jimela%29_female.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Ugandan_kobs_%28Kobus_kob_thomasi%29_female_and_calf.jpg/500px-Ugandan_kobs_%28Kobus_kob_thomasi%29_female_and_calf.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Olive_baboon_%28Papio_anubis%29_with_juvenile.jpg/500px-Olive_baboon_%28Papio_anubis%29_with_juvenile.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Polar_bear_%28Ursus_maritimus%29_with_its_prey.jpg/960px-Polar_bear_%28Ursus_maritimus%29_with_its_prey.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Cheetah_%28Acinonyx_jubatus%29_female_2.jpg/500px-Cheetah_%28Acinonyx_jubatus%29_female_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panthera_tigris_tigris_Tidoba_20150306.jpg/500px-Panthera_tigris_tigris_Tidoba_20150306.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Jaguar_%28Panthera_onca_palustris%29_male_Rio_Negro_2.JPG/500px-Jaguar_%28Panthera_onca_palustris%29_male_Rio_Negro_2.JPG" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Eastern_Grey_Squirrel.jpg/500px-Eastern_Grey_Squirrel.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Antarctic_Sound-2016-Brown_Bluff%E2%80%93Leopard_seal_%28Hydrurga_leptonyx%29_04.jpg/450px-Antarctic_Sound-2016-Brown_Bluff%E2%80%93Leopard_seal_%28Hydrurga_leptonyx%29_04.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Antarctic_Sound-2016-Brown_Bluff%E2%80%93Leopard_seal_%28Hydrurga_leptonyx%29_05.jpg/450px-Antarctic_Sound-2016-Brown_Bluff%E2%80%93Leopard_seal_%28Hydrurga_leptonyx%29_05.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Meerkat_%28Suricata_suricatta%29_Tswalu.jpg/500px-Meerkat_%28Suricata_suricatta%29_Tswalu.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tragelaphus_strepsiceros_%E2%99%82_%28head%29.jpg/225px-Tragelaphus_strepsiceros_%E2%99%82_%28head%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Yellow-headed_caracara_%28Milvago_chimachima%29_on_capybara_%28Hydrochoeris_hydrochaeris%29.JPG/500px-Yellow-headed_caracara_%28Milvago_chimachima%29_on_capybara_%28Hydrochoeris_hydrochaeris%29.JPG" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Xerus_inauris.jpg/500px-Xerus_inauris.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Macrocranion_tupaiodon_01.jpg/500px-Macrocranion_tupaiodon_01.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Proboscis_monkey_%28Nasalis_larvatus%29_female_Labuk_Bay.jpg/500px-Proboscis_monkey_%28Nasalis_larvatus%29_female_Labuk_Bay.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Papio_papio_and_juvenile_Port_Lympne_Wild_Animal_Park.jpg/960px-Papio_papio_and_juvenile_Port_Lympne_Wild_Animal_Park.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Cheetah_portrait_Whipsnade_Zoo.jpg/500px-Cheetah_portrait_Whipsnade_Zoo.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Charolais_cattle%2C_Sierra_Nevada%2C_Venezuela.jpg/500px-Charolais_cattle%2C_Sierra_Nevada%2C_Venezuela.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/500px-2010-kodiak-bear-1.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Darwinius_masillae_PMO_214.214.jpg/196px-Darwinius_masillae_PMO_214.214.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Equus_quagga_burchellii_-_Etosha%2C_2014.jpg/450px-Equus_quagga_burchellii_-_Etosha%2C_2014.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Marmota_monax_UL_04.jpg/500px-Marmota_monax_UL_04.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Choloepus_hoffmanni_%28Puerto_Viejo%2C_CR%29_crop.jpg/500px-Choloepus_hoffmanni_%28Puerto_Viejo%2C_CR%29_crop.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Erinaceus_europaeus_%28Linnaeus%2C_1758%29.jpg/500px-Erinaceus_europaeus_%28Linnaeus%2C_1758%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Capra_pyrenaica_victoriae%2C_juvenile_--_2013_--_Laguna_Grande%2C_Sierra_de_Gredos%2C_Espa%C3%B1a.jpg/425px-Capra_pyrenaica_victoriae%2C_juvenile_--_2013_--_Laguna_Grande%2C_Sierra_de_Gredos%2C_Espa%C3%B1a.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Babyrousa_celebensis_-_Crane.jpg/500px-Babyrousa_celebensis_-_Crane.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Squirrel_posing.jpg/500px-Squirrel_posing.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flock_of_sheep.jpg/250px-Flock_of_sheep.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Felis_silvestris_silvestris_Luc_Viatour.jpg/250px-Felis_silvestris_silvestris_Luc_Viatour.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Snow_leopard_portrait.jpg/330px-Snow_leopard_portrait.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/2012-bb-jackal-1.jpg/500px-2012-bb-jackal-1.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Marmota_flaviventris_%28Yellow_Bellied_Marmot%29%2C_Yosemite_NP_-_Diliff.jpg/500px-Marmota_flaviventris_%28Yellow_Bellied_Marmot%29%2C_Yosemite_NP_-_Diliff.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Madoqua_kirkii_-_female_%28Namutoni%29.jpg/500px-Madoqua_kirkii_-_female_%28Namutoni%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Cynictis_penicillata_%28Etosha%2C_2011%29.jpg/250px-Cynictis_penicillata_%28Etosha%2C_2011%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Male_impala_profile.jpg/250px-Male_impala_profile.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Raphicerus_campestris_female_%28Etosha%2C_2012%29.jpg/500px-Raphicerus_campestris_female_%28Etosha%2C_2012%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Elephas_maximus_%28Bandipur%29.jpg/450px-Elephas_maximus_%28Bandipur%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Mother_and_baby_sperm_whale.jpg/960px-Mother_and_baby_sperm_whale.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Galerella_sanguinea_Zoo_Praha_2011-2.jpg/330px-Galerella_sanguinea_Zoo_Praha_2011-2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Hylobates_lar_-_Kaeng_Krachan_WB.jpg/960px-Hylobates_lar_-_Kaeng_Krachan_WB.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Zanzibar_Red_Colobus_Monkey.jpg/451px-Zanzibar_Red_Colobus_Monkey.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bos_grunniens_at_Letdar_on_Annapurna_Circuit.jpg/500px-Bos_grunniens_at_Letdar_on_Annapurna_Circuit.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Equus_asinus_Kadzid%C5%82owo_001.jpg/500px-Equus_asinus_Kadzid%C5%82owo_001.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Bos_grunniens_at_Yundrok_Yumtso_Lake.jpg/500px-Bos_grunniens_at_Yundrok_Yumtso_Lake.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Felis_silvestris_silvestris.jpg/330px-Felis_silvestris_silvestris.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Syncerus_caffer_african_buffalo_skull_MNHN.jpg/500px-Syncerus_caffer_african_buffalo_skull_MNHN.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Aepyceros_melampus_petersi_female_8014.jpg/450px-Aepyceros_melampus_petersi_female_8014.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Arctocephalus_pusillus_-_SE_Tasmania.jpg/450px-Arctocephalus_pusillus_-_SE_Tasmania.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Drymoreomys_albimaculatus_002.jpg/500px-Drymoreomys_albimaculatus_002.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Indian_Palm_Squirrel_%28Funambulus_palmarum%29.jpg/250px-Indian_Palm_Squirrel_%28Funambulus_palmarum%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/African_elephant_warning_raised_trunk.jpg/500px-African_elephant_warning_raised_trunk.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Giraffe_Mikumi_National_Park.jpg/250px-Giraffe_Mikumi_National_Park.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Female_impala.jpg/250px-Female_impala.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/250px-African_Bush_Elephant.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Viljo_koirarannalla_18-edit2.jpg/500px-Viljo_koirarannalla_18-edit2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Ngorongoro_Spitzmaulnashorn_edit1.jpg/500px-Ngorongoro_Spitzmaulnashorn_edit1.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/225px-Cat_November_2010-1a.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Diceros_bicornis_MNHN.jpg/500px-Diceros_bicornis_MNHN.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Serengeti_Elefantenbulle.jpg/500px-Serengeti_Elefantenbulle.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Sarcophilus_harrisii_taranna.jpg/500px-Sarcophilus_harrisii_taranna.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Macropus_rufogriseus_rufogriseus_Bruny.jpg/250px-Macropus_rufogriseus_rufogriseus_Bruny.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Bison_bonasus_%28Linnaeus_1758%29.jpg/500px-Bison_bonasus_%28Linnaeus_1758%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Culpeo_MC.jpg/500px-Culpeo_MC.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Antidorcas_marsupialis_2.jpg/500px-Antidorcas_marsupialis_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Plains_Zebra_Equus_quagga.jpg/250px-Plains_Zebra_Equus_quagga.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Blue_Wildebeest%2C_Ngorongoro.jpg/500px-Blue_Wildebeest%2C_Ngorongoro.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Vombatus_ursinus_-Maria_Island_National_Park.jpg/450px-Vombatus_ursinus_-Maria_Island_National_Park.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Panthera_tigris_altaica_13_-_Buffalo_Zoo.jpg/500px-Panthera_tigris_altaica_13_-_Buffalo_Zoo.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Macropus_rufogriseus_rufogriseus_Juvenile_2.jpg/500px-Macropus_rufogriseus_rufogriseus_Juvenile_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Oryctolagus_cuniculus_Tasmania_2.jpg/250px-Oryctolagus_cuniculus_Tasmania_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Indian_Palm_Squirrel_Bangalore_2009.jpg/500px-Indian_Palm_Squirrel_Bangalore_2009.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Meerkat_feb_09.jpg/450px-Meerkat_feb_09.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Zebra_portrait.jpg/250px-Zebra_portrait.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Cheetah_cub_close-up_edit2.jpg/500px-Cheetah_cub_close-up_edit2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Swaledale_Sheep%2C_Lake_District%2C_England_-_June_2009.jpg/500px-Swaledale_Sheep%2C_Lake_District%2C_England_-_June_2009.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Albino_Macropus_rufogriseus_rufogriseus.jpg/250px-Albino_Macropus_rufogriseus_rufogriseus.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/CA_Ground_Squirrel_on_rock.jpg/500px-CA_Ground_Squirrel_on_rock.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Parma_wallaby_crop2.jpg/330px-Parma_wallaby_crop2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Eastern_grey_kangaroo_dec07_02.jpg/250px-Eastern_grey_kangaroo_dec07_02.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Sea_otter_nursing02.jpg/960px-Sea_otter_nursing02.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/BrownSpiderMonkey_%28edit2%29.jpg/330px-BrownSpiderMonkey_%28edit2%29.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Pot-bellied_pigs_in_Lisbon_Zoo_2008.jpg/500px-Pot-bellied_pigs_in_Lisbon_Zoo_2008.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ambondro_lingual.jpg/500px-Ambondro_lingual.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Olive_baboon_Ngorongoro.jpg/330px-Olive_baboon_Ngorongoro.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Serengeti_Impala3.jpg/330px-Serengeti_Impala3.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Tarangire_Warzenschwein1.jpg/500px-Tarangire_Warzenschwein1.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Grooming_monkeys_PLW_edit.jpg/422px-Grooming_monkeys_PLW_edit.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sahelanthropus_tchadensis_-_TM_266-01-060-1.jpg/500px-Sahelanthropus_tchadensis_-_TM_266-01-060-1.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Bettongia_gaimardi.jpg/500px-Bettongia_gaimardi.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Perameles_gunni.jpg/500px-Perameles_gunni.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Trichosurus_vulpecula_1.jpg/250px-Trichosurus_vulpecula_1.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Thylogale_billardierii.jpg/336px-Thylogale_billardierii.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Tamias_striatus_CT.jpg/500px-Tamias_striatus_CT.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/MC_Drei-Finger-Faultier.jpg/500px-MC_Drei-Finger-Faultier.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/West_European_Hedgehog_%28Erinaceus_europaeus%292.jpg/500px-West_European_Hedgehog_%28Erinaceus_europaeus%292.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Impala_mutualism_with_birds_wide.jpg/437px-Impala_mutualism_with_birds_wide.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Swamp-Wallaby-joey-Wallabia-bicolor-cropped.jpg/500px-Swamp-Wallaby-joey-Wallabia-bicolor-cropped.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Giraffe_feeding%2C_Tanzania.jpg/500px-Giraffe_feeding%2C_Tanzania.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Phascolarctos_cinereus_Bonorong.jpg/194px-Phascolarctos_cinereus_Bonorong.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Koala_and_joey.jpg/330px-Koala_and_joey.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Mirounga_leonina.jpg/500px-Mirounga_leonina.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Domestic_goat_kid_in_capeweed.jpg/500px-Domestic_goat_kid_in_capeweed.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Cub_polar_bear_is_nursing_2.ogv/395px--Cub_polar_bear_is_nursing_2.ogv.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/CH_cow_2.jpg/250px-CH_cow_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Elephant_seals_fighting.jpg/500px-Elephant_seals_fighting.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Goldmantelziesel.jpg/500px-Goldmantelziesel.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Japanese_Squirrel_edit2.jpg/500px-Japanese_Squirrel_edit2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Wild_Boar_Habbitat_3.jpg/500px-Wild_Boar_Habbitat_3.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cebus_albifrons_edit.jpg/225px-Cebus_albifrons_edit.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Elephant_seal_colony_edit.jpg/500px-Elephant_seal_colony_edit.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Jaguar_at_Edinburgh_Zoo.jpg/500px-Jaguar_at_Edinburgh_Zoo.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tamarin_portrait_2_edit3.jpg/450px-Tamarin_portrait_2_edit3.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Hereford_Calf_Portrait%2C_SC%2C_Vic%2C_13.10.2007_edit.jpg/500px-Hereford_Calf_Portrait%2C_SC%2C_Vic%2C_13.10.2007_edit.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/07._Camel_Profile%2C_near_Silverton%2C_NSW%2C_07.07.2007.jpg/250px-07._Camel_Profile%2C_near_Silverton%2C_NSW%2C_07.07.2007.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Humpback_stellwagen_edit.jpg/530px-Humpback_stellwagen_edit.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Whales_Bubble_Net_Feeding-edit1.jpg/500px-Whales_Bubble_Net_Feeding-edit1.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Marmot-edit1.jpg/500px-Marmot-edit1.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Tree_lion_2.jpg/480px-Tree_lion_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Gibraltar_Barbary_Macaque.jpg/400px-Gibraltar_Barbary_Macaque.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Male_Lion_and_Cub_Chitwa_South_Africa_Luca_Galuzzi_2004.JPG/500px-Male_Lion_and_Cub_Chitwa_South_Africa_Luca_Galuzzi_2004.JPG" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Prairie_Dog_Washington_DC_1.jpg/500px-Prairie_Dog_Washington_DC_1.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Horse_anatomy.svg/500px-Horse_anatomy.svg.png" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Opossum_2.jpg/500px-Opossum_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Wild_shortbeak_echidna.jpg/500px-Wild_shortbeak_echidna.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Eastern_Grey_Squirrel_in_St_James%27s_Park%2C_London_-_Nov_2006_edit.jpg/500px-Eastern_Grey_Squirrel_in_St_James%27s_Park%2C_London_-_Nov_2006_edit.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Mexican_Wolf_2_yfb-edit_1.jpg/500px-Mexican_Wolf_2_yfb-edit_1.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Tamias-rufus-001.jpg/500px-Tamias-rufus-001.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Raccoon_%28Procyon_lotor%29_2.jpg/500px-Raccoon_%28Procyon_lotor%29_2.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Pseudalopex_culpaeus.jpg/500px-Pseudalopex_culpaeus.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Golden-Mantled_Ground_Squirrel%2C_Mount_Rainier%2C_July_2006.jpg/330px-Golden-Mantled_Ground_Squirrel%2C_Mount_Rainier%2C_July_2006.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/American_bison_k5680-1.jpg/500px-American_bison_k5680-1.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Sibirischer_tiger_de_edit02.jpg/500px-Sibirischer_tiger_de_edit02.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Mexican_wolf_lounging.jpg/500px-Mexican_wolf_lounging.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Hippo_pod_edit.jpg/450px-Hippo_pod_edit.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Haeckel_Chiroptera.jpg/250px-Haeckel_Chiroptera.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Seehund.jpg/500px-Seehund.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Koala_climbing_tree.jpg/330px-Koala_climbing_tree.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Sheep_eating_grass_edit02.jpg/500px-Sheep_eating_grass_edit02.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/LutraCanadensis_fullres.jpg/331px-LutraCanadensis_fullres.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Red_Panda.JPG/500px-Red_Panda.JPG" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Hippo_skull_dark.jpg/500px-Hippo_skull_dark.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Lynx_kitten.jpg/500px-Lynx_kitten.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Wapiti_from_Wagon_Trails.jpg/500px-Wapiti_from_Wagon_Trails.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Tursiops_truncatus_01.jpg/500px-Tursiops_truncatus_01.jpg" alt="Image" onclick="imgClicked(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Coyote_portrait.jpg/526px-Coyote_portrait.jpg" alt="Image" onclick="imgClicked(this)">
+
+    </div>
+
+    <script src="gallery.js" type="module" ></script>
+</body>
+</html>
