@@ -1,6 +1,4 @@
 
-
-
 const animalCategories = [
     // Mammals
   "lion", "tiger", "elephant", "giraffe", "zebra",
@@ -37,7 +35,7 @@ const animalCategories = [
   "dragon", "unicorn", "dinosaur", "mammoth", "sabertooth" , "animal"
 ];
 
-console.log(animalCategories.length); 
+// console.log(animalCategories.length); 
 
 let reload = document.getElementById("reload");
 reload.addEventListener("click" , newList);
@@ -73,23 +71,6 @@ async function getWIki() {
     let word = inanimal.value;
     if (!word) return;
 
-    let found = false;
-
-    word = word.toLowerCase();
-
-    for (const animalCat of animalCategories) {
-        if (word == animalCat) {
-            found = true;
-        }
-    }
-    if (found == false) {
-        h2animal.innerText = "Please Enter Animal Name :)";
-        imganimal.src = "";
-        imganimal.alt = "";
-        panimal.innerHTML = "";
-        return;
-    }
-
     const baseUrl = 'https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*';
     const props = [
         'extracts',
@@ -116,12 +97,7 @@ async function getWIki() {
             return;
         }
 
-
-
-
-
         h2animal.innerText = page.title;
-
 
         if (page.thumbnail) {
             imganimal.src = page.thumbnail.source;
@@ -133,6 +109,8 @@ async function getWIki() {
 
 
         panimal.innerHTML = page.extract || 'No extract available';
+
+        h2animal.innerText = page.title;
 
 
 
@@ -154,12 +132,9 @@ async function fetchAPI(url, options = {}) {
 }
 
 
-
-
-
-
-
-
-
-
+window.chooseAnimal = function(element) {
+    inanimal.value = element.value;
+  };
+  
+  window.newList = newList;
 
